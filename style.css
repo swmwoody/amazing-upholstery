@@ -1,29 +1,31 @@
-body { margin:0; font-family: "Poppins", sans-serif; background:#f8f5f2; color:#2e2e2e; }
+/* General */
+body { margin:0; font-family: "Poppins", sans-serif; background:#f1f3f6; color:#2e2e2e; }
 .container { width:90%; max-width:1100px; margin:auto; }
 
 /* Header */
-header { display:flex; justify-content:space-between; align-items:center; background:#f4ede6; padding:1rem 0; position:sticky; top:0; z-index:1000; }
-.logo { font-size:1.8rem; color:#4b3f36; font-weight:600; }
-nav a { margin-left:1.2rem; text-decoration:none; color:#4b3f36; font-weight:500; }
-nav a.active { color:#b66a32; }
+header { display:flex; justify-content:space-between; align-items:center; background:#ffffff; padding:1rem 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 4px rgba(0,0,0,0.05);}
+.logo { font-size:1.8rem; color:#1a2a3a; font-weight:600; }
+nav a { margin-left:1.2rem; text-decoration:none; color:#1a2a3a; font-weight:500; }
+nav a.active { color:#0072c6; }
 
 /* Hero */
 .hero { position:relative; background:url("images/living-room.jpg") center/cover no-repeat; height:70vh; display:flex; align-items:center; justify-content:center; }
 .hero-overlay { background:rgba(0,0,0,0.55); color:white; padding:2rem; text-align:center; border-radius:10px; }
-.btn { display:inline-block; margin:0.5rem; padding:0.8rem 1.5rem; border-radius:5px; background:#b66a32; color:white; text-decoration:none; }
+.btn { display:inline-block; margin:0.5rem; padding:0.8rem 1.5rem; border-radius:5px; background:#0072c6; color:white; text-decoration:none; font-weight:500; }
 .btn.secondary { background:transparent; border:2px solid white; }
 
 /* Services */
 .services { display:flex; justify-content:space-between; flex-wrap:wrap; text-align:center; padding:2rem 0; }
-.service { flex:1 1 250px; margin:1rem; }
+.service { flex:1 1 300px; margin:1rem; background:#ffffff; padding:1.5rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+.service h3 { color:#0072c6; }
 
 /* Testimonials */
-.testimonials { background:#fff; padding:2rem; }
+.testimonials { background:#ffffff; padding:2rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin:2rem 0;}
 .testimonial { margin:1rem 0; font-style:italic; color:#555; }
-.testimonial p:last-child { text-align:right; font-weight:bold; color:#333; }
+.testimonial p:last-child { text-align:right; font-weight:bold; color:#1a2a3a; }
 
 /* Footer */
-footer { background:#f4ede6; text-align:center; padding:1rem 0; color:#4b3f36; }
+footer { background:#1a2a3a; text-align:center; padding:1.5rem 0; color:white; }
 
 /* Responsive */
 @media(max-width:768px) {
