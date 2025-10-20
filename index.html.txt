@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazing Upholstery | Craftsmanship You Can Trust</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Amazing Upholstery</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>High-Quality Upholstery Repair & Restoration</h2>
+      <p>Serving Durham, Greensboro, and Raleigh, NC — Automotive, Furniture, and Commercial Upholstery Experts.</p>
+      <a href="contact.html" class="btn">Request a Quote</a>
+      <a href="tel:9198015638" class="btn secondary">Call 919-801-5638</a>
+    </div>
+  </section>
+
+  <section class="features container">
+    <div class="feature">
+      <h3>Craftsmanship</h3>
+      <p>We take pride in every stitch, ensuring each repair or restoration reflects the highest level of detail.</p>
+    </div>
+    <div class="feature">
+      <h3>Customer Satisfaction</h3>
+      <p>Your satisfaction is our priority. That’s why every job comes with a 30-day warranty.</p>
+    </div>
+    <div class="feature">
+      <h3>Trusted Locally</h3>
+      <p>Proudly serving Durham, Greensboro, and Raleigh for over a decade.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Amazing Upholstery. All rights reserved.</p>
+  </footer>
+</body>
+</html>

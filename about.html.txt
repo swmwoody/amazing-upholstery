@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Amazing Upholstery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Amazing Upholstery</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page container">
+    <h2>About Us</h2>
+    <p>At Amazing Upholstery, we bring your interiors and vehicles back to life. With years of experience in automotive, furniture, and commercial upholstery repair, our mission is to deliver unmatched craftsmanship and dependable service.</p>
+    <p>Every repair is completed with care, backed by a 30-day warranty and a commitment to customer satisfaction. Whether it’s a cherished antique chair or a modern car seat, our attention to detail ensures your upholstery looks and feels brand new.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Amazing Upholstery. All rights reserved.</p>
+  </footer>
+</body>
+</html>
