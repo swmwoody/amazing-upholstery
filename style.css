@@ -5,12 +5,10 @@ body {
   background: #f1f3f6; 
   color: #2e2e2e; 
 }
-
 .container { 
   width: 90%; 
   max-width: 1100px; 
   margin: auto; 
-  text-align: center; /* keeps text and boxes aligned in center */
 }
 
 /* Header */
@@ -25,20 +23,17 @@ header {
   z-index: 1000; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
 .logo { 
   font-size: 1.8rem; 
   color: #1a2a3a; 
   font-weight: 600; 
 }
-
 nav a { 
   margin-left: 1.2rem; 
   text-decoration: none; 
   color: #1a2a3a; 
   font-weight: 500; 
 }
-
 nav a.active { 
   color: #0072c6; 
 }
@@ -54,16 +49,8 @@ nav a.active {
   text-align: center;
   padding: 2rem;
 }
-
-.hero-overlay h2 { 
-  font-size: 1.8rem; 
-  margin-bottom: 1rem; 
-}
-
-.hero-overlay p { 
-  margin-bottom: 1.5rem; 
-}
-
+.hero-overlay h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+.hero-overlay p { margin-bottom: 1.5rem; }
 .btn { 
   display: inline-block; 
   margin: 0.5rem; 
@@ -74,6 +61,72 @@ nav a.active {
   text-decoration: none; 
   font-weight: 500; 
 }
-
 .btn.secondary { 
-  background
+  background: transparent; 
+  border: 2px solid white; 
+  color: white;
+}
+
+/* Section Titles */
+h2 { 
+  color: #0072c6; 
+  margin-bottom: 1.5rem; 
+  text-align: center;
+}
+
+/* Grids */
+.industry-grid, .services-grid { 
+  display: flex; 
+  gap: 1.5rem; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+.industry, .service { 
+  flex: 1 1 300px; 
+  background: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  padding: 1.5rem; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+/* Individual Boxes */
+.industry h3, .service h3 { color: #0072c6; margin-bottom: 0.5rem; }
+.industry p, .service p { color: #2e2e2e; line-height: 1.5; }
+
+ /* Our Goal Section */
+.goal { 
+  background: #ffffff; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  margin: 2rem 0; 
+  text-align: center; 
+}
+.goal p { font-size: 1.1rem; line-height: 1.6; }
+
+ /* Testimonials Section */
+.testimonials { 
+  background: #ffffff; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  margin: 2rem 0; 
+}
+.testimonial { margin: 1rem 0; font-style: italic; color: #555; }
+.testimonial p:last-child { text-align: right; font-weight: bold; color: #1a2a3a; }
+
+/* Footer */
+footer { 
+  background: #1a2a3a; 
+  text-align: center; 
+  padding: 1.5rem 0; 
+  color: white; 
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .industry-grid, .services-grid { flex-direction: column; align-items: center; }
+}
