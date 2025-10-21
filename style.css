@@ -96,7 +96,7 @@ h2 {
 .industry h3, .service h3 { color: #0072c6; margin-bottom: 0.5rem; }
 .industry p, .service p { color: #2e2e2e; line-height: 1.5; }
 
- /* Our Goal Section */
+  /* Our Goal Section */
 .goal { 
   background: #ffffff; 
   padding: 2rem; 
@@ -107,7 +107,7 @@ h2 {
 }
 .goal p { font-size: 1.1rem; line-height: 1.6; }
 
- /* Testimonials Section */
+  /* Testimonials Section */
 .testimonials { 
   background: #ffffff; 
   padding: 2rem; 
@@ -130,3 +130,4 @@ footer {
 @media(max-width:768px) {
   .industry-grid, .services-grid { flex-direction: column; align-items: center; }
 }
+
