@@ -111,14 +111,16 @@ h2 {
    INDUSTRY & SERVICE GRIDS
 ================================ */
 .industry-grid, 
-.services-grid { 
+.services-grid, 
+.residential-grid { 
   display: flex; 
   gap: 1.5rem; 
   flex-wrap: wrap; 
   justify-content: center;
 }
 .industry, 
-.service { 
+.service, 
+.residential-item { 
   flex: 1 1 300px; 
   background: #ffffff; 
   border-radius: 10px; 
@@ -130,20 +132,43 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .industry:hover, 
-.service:hover { 
+.service:hover,
+.residential-item:hover { 
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 .industry h3, 
-.service h3 { 
+.service h3,
+.residential-item h3 { 
   color: #0d8bf2; 
   margin-bottom: 0.5rem; 
   font-size: 1.25rem;
 }
 .industry p, 
-.service p { 
+.service p,
+.residential-item p { 
   color: #2e2e2e; 
   line-height: 1.6; 
+}
+
+/* ================================
+   RESIDENTIAL SECTION
+================================ */
+.residential {
+  padding: 4rem 1rem;
+  background-color: #f3f9ff;
+  text-align: center;
+}
+.residential h2 {
+  margin-bottom: 2.5rem;
+}
+.residential .btn {
+  margin-top: 25px;
+  background-color: #0d8bf2;
+  color: #fff;
+}
+.residential .btn:hover {
+  background-color: #08335e;
 }
 
 /* ================================
@@ -222,7 +247,8 @@ footer p { margin: 0.3rem 0; }
   }
 
   .industry-grid, 
-  .services-grid {
+  .services-grid,
+  .residential-grid {
     flex-direction: column;
     align-items: center;
   }
