@@ -1,4 +1,6 @@
-/* General Styles */
+/* ================================
+   GENERAL STYLES
+================================ */
 body { 
   margin: 0; 
   font-family: "Poppins", sans-serif; 
@@ -11,7 +13,9 @@ body {
   margin: auto; 
 }
 
-/* Header */
+/* ================================
+   HEADER
+================================ */
 header { 
   display: flex; 
   justify-content: space-between; 
@@ -33,15 +37,19 @@ nav a {
   text-decoration: none; 
   color: #1a2a3a; 
   font-weight: 500; 
+  transition: color 0.3s;
 }
+nav a:hover,
 nav a.active { 
   color: #0072c6; 
 }
 
-/* Hero Section */
+/* ================================
+   HERO SECTION
+================================ */
 .hero { 
-  background: #0072c6; 
-  height: 50vh; 
+  background: linear-gradient(to right, #005b9f, #0072c6); 
+  height: 55vh; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -49,8 +57,16 @@ nav a.active {
   text-align: center;
   padding: 2rem;
 }
-.hero-overlay h2 { font-size: 1.8rem; margin-bottom: 1rem; }
-.hero-overlay p { margin-bottom: 1.5rem; }
+.hero-overlay h2 { 
+  font-size: 2rem; 
+  margin-bottom: 1rem; 
+}
+.hero-overlay p { 
+  margin-bottom: 1.5rem; 
+  max-width: 700px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
 .btn { 
   display: inline-block; 
   margin: 0.5rem; 
@@ -60,28 +76,42 @@ nav a.active {
   color: #0072c6; 
   text-decoration: none; 
   font-weight: 500; 
+  transition: all 0.3s ease;
+}
+.btn:hover { 
+  background: #e6f0fa;
 }
 .btn.secondary { 
   background: transparent; 
   border: 2px solid white; 
   color: white;
 }
+.btn.secondary:hover { 
+  background: white; 
+  color: #0072c6;
+}
 
-/* Section Titles */
+/* ================================
+   SECTION TITLES
+================================ */
 h2 { 
   color: #0072c6; 
   margin-bottom: 1.5rem; 
   text-align: center;
 }
 
-/* Grids */
-.industry-grid, .services-grid { 
+/* ================================
+   INDUSTRY & SERVICE GRIDS
+================================ */
+.industry-grid, 
+.services-grid { 
   display: flex; 
   gap: 1.5rem; 
   flex-wrap: wrap; 
   justify-content: center;
 }
-.industry, .service { 
+.industry, 
+.service { 
   flex: 1 1 300px; 
   background: #ffffff; 
   border-radius: 8px; 
@@ -90,43 +120,113 @@ h2 {
   display: flex; 
   flex-direction: column; 
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.industry:hover, 
+.service:hover { 
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+.industry h3, 
+.service h3 { 
+  color: #0072c6; 
+  margin-bottom: 0.5rem; 
+}
+.industry p, 
+.service p { 
+  color: #2e2e2e; 
+  line-height: 1.5; 
 }
 
-/* Individual Boxes */
-.industry h3, .service h3 { color: #0072c6; margin-bottom: 0.5rem; }
-.industry p, .service p { color: #2e2e2e; line-height: 1.5; }
-
-/* Our Goal Section */
+/* ================================
+   OUR GOAL (FULL WIDTH)
+================================ */
 .goal { 
   background: #ffffff; 
-  padding: 2rem; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-  margin: 2rem 0; 
+  padding: 4rem 1rem; 
   text-align: center; 
+  width: 100%; 
+  border-top: 4px solid #0072c6;
+  border-bottom: 4px solid #0072c6;
 }
-.goal p { font-size: 1.1rem; line-height: 1.6; }
+.goal h2 { 
+  color: #003366; 
+  margin-bottom: 1.5rem; 
+}
+.goal p { 
+  font-size: 1.1rem; 
+  line-height: 1.7; 
+  max-width: 900px; 
+  margin: 0.5rem auto;
+}
 
-/* Testimonials Section */
+/* ================================
+   TESTIMONIALS (FULL WIDTH)
+================================ */
 .testimonials { 
-  background: #ffffff; 
-  padding: 2rem; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-  margin: 2rem 0; 
+  background: #0072c6; 
+  color: white; 
+  padding: 4rem 1rem; 
+  text-align: center; 
+  width: 100%;
 }
-.testimonial { margin: 1rem 0; font-style: italic; color: #555; }
-.testimonial p:last-child { text-align: right; font-weight: bold; color: #1a2a3a; }
+.testimonials h2 { 
+  color: #ffffff; 
+  margin-bottom: 2rem; 
+}
+.testimonial { 
+  margin: 1.5rem auto; 
+  max-width: 800px; 
+  font-style: italic; 
+  font-size: 1.1rem;
+}
+.testimonial p:last-child { 
+  text-align: right; 
+  font-weight: bold; 
+  color: #eaf4ff; 
+  font-style: normal;
+}
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 footer { 
   background: #1a2a3a; 
   text-align: center; 
   padding: 1.5rem 0; 
   color: white; 
+  font-size: 0.9rem;
 }
 
-/* Responsive */
-@media(max-width:768px) {
-  .industry-grid, .services-grid { flex-direction: column; align-items: center; }
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  .industry-grid, 
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .goal p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    font-size: 1rem;
+  }
 }
