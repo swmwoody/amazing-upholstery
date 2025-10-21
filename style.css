@@ -146,6 +146,23 @@ h2 {
 }
 
 /* ================================
+   REQUEST QUOTE BUTTON (Under Industries)
+================================ */
+.industries .btn {
+  background-color: #0d8bf2;  
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.industries .btn:hover {
+  background-color: #08335e; 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
+}
+
+/* ================================
    OUR GOAL (FULL WIDTH)
 ================================ */
 .goal { 
