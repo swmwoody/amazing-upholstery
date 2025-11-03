@@ -1,254 +1,333 @@
-/* ================================
-   GENERAL STYLES
-================================ */
-body { 
-  margin: 0; 
-  font-family: "Poppins", sans-serif; 
-  background: #f7f9fb; 
-  color: #2b2b2b; 
-  line-height: 1.6;
-}
-.container { 
-  width: 90%; 
-  max-width: 1100px; 
-  margin: auto; 
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ================================
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f8fb;
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =====================================
    HEADER
-================================ */
-header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  background: #ffffff; 
-  padding: 1rem 0; 
-  position: sticky; 
-  top: 0; 
-  z-index: 1000; 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+===================================== */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.logo { 
-  font-size: 1.8rem; 
-  color: #102a43; 
-  font-weight: 600; 
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
 }
-nav a { 
-  margin-left: 1.2rem; 
-  text-decoration: none; 
-  color: #102a43; 
-  font-weight: 500; 
+
+.logo-img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.03);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #08335e;
+  font-weight: 500;
+  margin-left: 1.5rem;
   transition: color 0.3s;
 }
+
 nav a:hover,
-nav a.active { 
-  color: #0d8bf2; 
+nav a.active {
+  color: #0d8bf2;
 }
 
-/* ================================
+/* =====================================
    HERO SECTION
-================================ */
-.hero { 
-  background: linear-gradient(135deg, #5bbcff 0%, #0d8bf2 100%); 
-  height: 55vh; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+===================================== */
+.hero {
+  background: linear-gradient(135deg, #0d8bf2 0%, #4ab9ff 100%);
+  color: white;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
   padding: 2rem;
-  color: #1a1a1a;
 }
-.hero-overlay h2 { 
-  font-size: 2.2rem; 
-  margin-bottom: 1rem; 
-  color: #111111; 
-  text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+
+.hero h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
-.hero-overlay p { 
-  margin-bottom: 1.5rem; 
-  max-width: 700px; 
-  margin-left: auto; 
-  margin-right: auto; 
-  color: #2b2b2b;
-  background: rgba(255,255,255,0.6);
-  padding: 0.75rem 1.25rem;
+
+.hero p {
+  color: #f0f8ff;
+  background: rgba(255,255,255,0.15);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 8px;
-}
-.btn { 
-  display: inline-block; 
-  margin: 0.5rem; 
-  padding: 0.8rem 1.5rem; 
-  border-radius: 6px; 
-  background: white; 
-  color: #0d8bf2; 
-  text-decoration: none; 
-  font-weight: 500; 
+  background: #ffffff;
+  color: #0d8bf2;
+  text-decoration: none;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
-.btn:hover { 
-  background: #e6f4ff;
+
+.btn:hover {
+  background: #e8f6ff;
+  transform: translateY(-2px);
 }
-.btn.secondary { 
-  background: transparent; 
-  border: 2px solid white; 
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
   color: white;
 }
-.btn.secondary:hover { 
+
+.btn.secondary:hover {
   background: rgba(255,255,255,0.2);
 }
 
-/* ================================
-   SECTION TITLES
-================================ */
-h2 { 
-  color: #0d8bf2; 
-  margin-bottom: 1.5rem; 
+/* =====================================
+   GOAL / INTRO SECTION
+===================================== */
+.goal {
   text-align: center;
-  font-size: 1.8rem;
+  padding: 4rem 1rem;
+  background: #ffffff;
+  border-top: 4px solid #0d8bf2;
+  border-bottom: 4px solid #0d8bf2;
 }
 
-/* ================================
-   INDUSTRY & SERVICE GRIDS
-================================ */
-.industry-grid, 
-.services-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 1.5rem; 
-  justify-items: center;
-}
-.industry, 
-.service { 
-  background: #ffffff; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-  padding: 1.8rem; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.industry:hover, 
-.service:hover { 
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-.industry h3, 
-.service h3 { 
-  color: #0d8bf2; 
-  margin-bottom: 0.5rem; 
-  font-size: 1.25rem;
-}
-.industry p, 
-.service p { 
-  color: #2e2e2e; 
-  line-height: 1.6; 
+.goal h2 {
+  font-size: 2rem;
+  color: #08335e;
+  margin-bottom: 1.5rem;
 }
 
-/* ================================
-   REQUEST QUOTE BUTTON (Under Industries)
-================================ */
-.industries .btn {
-  background-color: #0d8bf2;  
-  color: #ffffff;
-  padding: 0.9rem 2rem;
+.goal p {
   font-size: 1.1rem;
+  color: #2b2b2b;
+  max-width: 900px;
+  margin: 1rem auto;
+  line-height: 1.7;
+}
+
+/* =====================================
+   INDUSTRIES
+===================================== */
+.industries {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.industries h2 {
+  color: #0d8bf2;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.industry {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.industry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.industry h3 {
+  color: #0d8bf2;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.industry p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.industries .btn {
+  margin-top: 2.5rem;
+  background: #0d8bf2;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 2.2rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  margin-top: 2rem;
-}
-.industries .btn:hover {
-  background-color: #08335e; 
-  transform: translateY(-3px); 
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
 }
 
-/* ================================
-   OUR GOAL (FULL WIDTH)
-================================ */
-.goal { 
-  background: linear-gradient(180deg, #ffffff 0%, #f3f9ff 100%); 
-  padding: 4rem 1rem; 
-  text-align: center; 
-  width: 100%; 
-  border-top: 3px solid #0d8bf2;
-  border-bottom: 3px solid #0d8bf2;
+.industries .btn:hover {
+  background: #08335e;
+  transform: translateY(-3px);
 }
-.goal h2 { 
-  color: #08335e; 
-  margin-bottom: 1.5rem; 
+
+/* =====================================
+   SERVICES
+===================================== */
+.services {
+  padding: 4rem 0;
+  text-align: center;
 }
-.goal p { 
-  font-size: 1.1rem; 
-  line-height: 1.7; 
-  max-width: 900px; 
-  margin: 0.5rem auto;
+
+.services h2 {
+  color: #0d8bf2;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.service {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.service h3 {
+  color: #0d8bf2;
+  margin-bottom: 0.8rem;
+}
+
+.service p {
   color: #2b2b2b;
 }
 
-/* ================================
-   TESTIMONIALS (FULL WIDTH)
-================================ */
-.testimonials { 
-  background: #0d8bf2; 
-  color: white; 
-  padding: 4rem 1rem; 
-  text-align: center; 
-  width: 100%;
-}
-.testimonials h2 { 
-  color: #ffffff; 
-  margin-bottom: 2rem; 
-}
-.testimonial { 
-  margin: 1.5rem auto; 
-  max-width: 800px; 
-  font-style: italic; 
-  font-size: 1.1rem;
-}
-.testimonial p:last-child { 
-  text-align: right; 
-  font-weight: bold; 
-  color: #eaf6ff; 
-  font-style: normal;
+/* =====================================
+   TESTIMONIALS
+===================================== */
+.testimonials {
+  background: #0d8bf2;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
-/* ================================
+.testimonials h2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.testimonial p:last-child {
+  text-align: right;
+  font-style: normal;
+  font-weight: 600;
+  color: #e3f4ff;
+}
+
+/* =====================================
    FOOTER
-================================ */
-footer { 
-  background: #102a43; 
-  text-align: center; 
-  padding: 1.8rem 0; 
-  color: white; 
+===================================== */
+footer {
+  background: #08335e;
+  color: white;
+  text-align: center;
+  padding: 1.8rem 0;
   font-size: 0.95rem;
 }
-footer p { margin: 0.3rem 0; }
 
-/* ================================
+footer p {
+  margin: 0.4rem 0;
+}
+
+/* =====================================
    RESPONSIVE DESIGN
-================================ */
-@media(max-width: 768px) {
-  header {
+===================================== */
+@media (max-width: 768px) {
+  .header-container {
     flex-direction: column;
-    text-align: center;
   }
 
   nav {
     margin-top: 0.5rem;
   }
 
-  .industry-grid, 
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .industries .btn {
-    width: 70%;
-    font-size: 1rem;
+  .logo-img {
+    height: 60px;
   }
 
   .hero {
@@ -256,11 +335,20 @@ footer p { margin: 0.3rem 0; }
     padding: 3rem 1rem;
   }
 
-  .hero-overlay h2 {
-    font-size: 1.6rem;
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .goal p {
+    font-size: 1rem;
+  }
+
+  .industries .btn {
+    width: 70%;
     font-size: 1rem;
   }
 
