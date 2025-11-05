@@ -1,83 +1,48 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body */
-body {
-  font-family: "Poppins", sans-serif;
-  color: #222;
-  background-color: #f9f9f9;
-  line-height: 1.6;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to bottom right, #0d47a1, #1976d2);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-}
-
-.hero-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Headings */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/* Button */
-.cta-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #1976d2;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e3f2fd;
-}
-
-/* About and Contact Sections */
-.about, .contact {
-  background-color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about h2, .contact h2 {
-  color: #0d47a1;
-  margin-bottom: 15px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0d47a1;
-  color: white;
-  font-size: 0.9rem;
-}
+/* ================================ GENERAL STYLES ================================ */
+body { 
+  margin: 0; 
+  font-family: "Poppins", sans-serif; 
+  background: #f7f9fb; 
+  color: #2b2b2b; 
+  line-height: 1.6; 
+} 
+.container { 
+  width: 90%; 
+  max-width: 1100px; 
+  margin: auto; 
+  padding-left: 0.5rem; 
+  padding-right: 0.5rem; 
+} 
+/* ================================ HEADER ================================ */ 
+header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: #ffffff; 
+  padding: 1rem 0; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+} 
+.logo { 
+  font-size: 1.8rem; 
+  color: #102a43; 
+  font-weight: 600; 
+} 
+nav a { 
+  margin-left: 1.2rem; 
+  text-decoration: none; 
+  color: #102a43; 
+  font-weight: 500; 
+  transition: color 0.3s; 
+} 
+nav a:hover, 
+nav a.active { 
+  color: #0d8bf2; 
+} 
+/* ================================ HERO SECTION ================================ */ 
+.hero { 
+  background: linear-gradient(135deg, #5bbcff 0%, #0d8bf2 100%); 
+  height: 55vh; 
+  display
