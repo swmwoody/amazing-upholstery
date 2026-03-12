@@ -1,51 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazing Upholstery | Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazing Upholstery | Medical, Commercial & Residential Reupholstery</title>
+  <meta name="description" content="Amazing Upholstery provides medical, commercial, aviation, and residential reupholstery services in North Carolina. Get a free estimate today." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #0f766e;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #0b5d57;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #0f766e;
+      border: 2px solid #0f766e;
+    }
+
+    .btn-secondary:hover {
+      background: #f0fdfa;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .logo span {
+      color: #0f766e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .nav-links a:hover {
+      color: #0f766e;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f8fafc 0%, #ecfeff 100%);
+      padding: 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      color: #4b5563;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .badge {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .hero-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .hero-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      color: #374151;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      font-size: 1.05rem;
+    }
+
+    .services-grid,
+    .reasons-grid,
+    .process-grid,
+    .testimonials-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .reasons-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    .card-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .dark-section {
+      background: #111827;
+      color: #fff;
+    }
+
+    .dark-section .section-title h2,
+    .dark-section .section-title p {
+      color: #fff;
+    }
+
+    .dark-card {
+      background: #1f2937;
+      border: 1px solid #374151;
+      color: #fff;
+    }
+
+    .dark-card p {
+      color: #d1d5db;
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .quote-section h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .quote-section p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: #e6fffb;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 35px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-grid p,
+    .footer-grid a {
+      color: #cbd5e1;
+    }
+
+    .footer-grid a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .services-grid,
+      .reasons-grid,
+      .process-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .services-grid,
+      .reasons-grid,
+      .process-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .quote-section {
+        padding: 35px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1 class="logo">Amazing Upholstery</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container nav">
+      <div class="logo">Amazing <span>Upholstery</span></div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="btn btn-primary">Get Estimate</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="gallery container">
-  <h2>Our Work</h2>
-  <p>We specialize in professional upholstery for medical, aviation, and commercial clients. Examples of our work include:</p>
-  
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <h3>Medical Seating</h3>
-      <p>Reupholstering hospital chairs, exam tables, and lab seating with hygienic, durable materials.</p>
-    </div>
-    <div class="gallery-item">
-      <h3>Aviation Interiors</h3>
-      <p>Custom upholstery for airplane seats, cockpits, and private jets, ensuring safety and luxury finishes.</p>
-    </div>
-    <div class="gallery-item">
-      <h3>Commercial Spaces</h3>
-      <p>Professional upholstery for offices, hotels, restaurants, and corporate spaces designed to last.</p>
-    </div>
-  </div>
-</section>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Professional Reupholstery for Medical, Commercial & Residential Spaces</h1>
+        <p>
+          We restore worn, damaged, and outdated seating with clean craftsmanship,
+          durable materials, and a professional finish. Serving North Carolina with
+          dependable upholstery solutions for healthcare, business, and home environments.
+        </p>
 
-<footer>
-  <div class="container">
-    <p>Call us: 919-590-5529 | Serving Durham, Greensboro, Raleigh</p>
-    <p>© 2025 Amazing Upholstery</p>
-  </div>
-</footer>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+          <a href="tel:9195905529" class="btn btn-secondary">Call 919-590-5529</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge">Medical Grade Materials</div>
+          <div class="badge">Commercial Durability</div>
+          <div class="badge">Fast Turnaround</div>
+          <div class="badge">North Carolina Based</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>What We Help With</h3>
+        <ul>
+          <li>Exam tables, dental chairs, waiting room seating</li>
+          <li>Restaurant booths, office seating, lobby furniture</li>
+          <li>Sofas, cushions, dining chairs, accent furniture</li>
+          <li>Foam replacement, panel replacement, full recover work</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Request Your Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Upholstery Services</h2>
+        <p>
+          Built for durability, appearance, and practical use across high-traffic and specialty environments.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card">
+          <h3>Medical Upholstery</h3>
+          <p>Exam tables, dental chairs, lab stools, waiting room seating, and other healthcare furniture using cleanable, professional-grade materials.</p>
+        </div>
+
+        <div class="card">
+          <h3>Commercial Upholstery</h3>
+          <p>Office seating, restaurant booths, lobby furniture, and business interiors designed for frequent use and a polished look.</p>
+        </div>
+
+        <div class="card">
+          <h3>Residential Reupholstery</h3>
+          <p>Sofas, sectionals, dining chairs, ottomans, and custom seating restored for comfort, style, and long-term use.</p>
+        </div>
+
+        <div class="card">
+          <h3>Restoration & Repairs</h3>
+          <p>Panel replacement, foam replacement, worn cushion rebuilds, damaged vinyl repair, and full recover projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="dark-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Clients Choose Amazing Upholstery</h2>
+        <p>
+          We focus on quality, professionalism, and results that hold up in real-world use.
+        </p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="card dark-card">
+          <h3>Professional Finish</h3>
+          <p>We deliver clean, refined work that upgrades the look and feel of your furniture instead of just patching it up.</p>
+        </div>
+
+        <div class="card dark-card">
+          <h3>Built for Use</h3>
+          <p>Our material choices and workmanship are designed for durability in high-traffic medical, business, and family settings.</p>
+        </div>
+
+        <div class="card dark-card">
+          <h3>Clear Communication</h3>
+          <p>We keep the process straightforward, explain the scope clearly, and help clients understand the best repair or reupholstery option.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>Simple 3-Step Process</h2>
+        <p>
+          Easy for clients. Clear for decision-making. Professional from start to finish.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="card">
+          <div class="card-number">1</div>
+          <h3>Send Photos or Call</h3>
+          <p>Reach out with photos and a quick description of the furniture or project so we can review your needs.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">2</div>
+          <h3>Get a Clear Estimate</h3>
+          <p>We provide guidance on the best approach, material direction, and project expectations before work begins.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">3</div>
+          <h3>Restore & Deliver</h3>
+          <p>Your furniture is professionally reupholstered or repaired with attention to durability, appearance, and finish quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Clients Are Saying</h2>
+        <p>Results that make furniture look cleaner, more professional, and ready for continued use.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="card">
+          <h3>Medical Client</h3>
+          <p>“Our exam tables and waiting room seating looked brand new after the work was completed. Clean, professional, and durable.”</p>
+        </div>
+
+        <div class="card">
+          <h3>Commercial Client</h3>
+          <p>“The finished work gave our seating a much better look without needing to replace everything. Great communication and strong results.”</p>
+        </div>
+
+        <div class="card">
+          <h3>Residential Client</h3>
+          <p>“Our furniture feels updated and refreshed. The craftsmanship made a huge difference in the final look.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="quote-section" id="contact">
+        <h2>Ready to Upgrade Your Furniture?</h2>
+        <p>
+          Whether you need medical seating recovered, commercial booths restored,
+          or home furniture brought back to life, we make the process simple.
+        </p>
+        <div class="hero-buttons" style="justify-content:center;">
+          <a href="tel:9195905529" class="btn btn-secondary">Call 919-590-5529</a>
+          <a href="mailto:info@amazingreup.com" class="btn btn-primary">Email for Estimate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Amazing Upholstery</strong>
+        <p>Serving North Carolina with medical, commercial, and residential upholstery solutions.</p>
+      </div>
+      <div>
+        <p><a href="tel:9195905529">919-590-5529</a></p>
+        <p><a href="mailto:info@amazingreup.com">info@amazingreup.com</a></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
