@@ -1,3 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.alt-bg {
+  background: #f8fafc;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #111827;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #0f766e;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: #374151;
+}
+
+.nav-links a:hover {
+  color: #0f766e;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #0b5d57;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #0f766e;
+  border: 2px solid #0f766e;
+}
+
+.btn-secondary:hover {
+  background: #f0fdfa;
+}
+
+.full-width {
+  width: 100%;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #ecfeff 100%);
+  padding: 90px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #0f766e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.08rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.center-buttons {
+  justify-content: center;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.hero-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-card h2 {
+  font-size: 1.45rem;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.hero-card ul {
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.hero-card li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+}
+
+.hero-card li:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  max-width: 760px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  font-size: 1.05rem;
+  color: #6b7280;
+}
+
+.section-title.light h2,
+.section-title.light p {
+  color: #ffffff;
+}
+
+.card-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.reasons-grid,
+.process-grid,
+.testimonials-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #6b7280;
+}
+
+.dark-section {
+  background: #111827;
+}
+
+.dark-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+}
+
+.dark-card h3 {
+  color: #ffffff;
+}
+
+.dark-card p {
+  color: #d1d5db;
+}
+
+.step-number {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0f766e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -6,17 +299,16 @@
 
 .gallery-item {
   background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .gallery-item img {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  display: block;
 }
 
 .gallery-caption {
@@ -25,15 +317,99 @@
   color: #111827;
 }
 
+.cta-box {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 52px 30px;
+  text-align: center;
+}
+
+.cta-box h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #e6fffb;
+}
+
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 36px 0;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-grid h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
 @media (max-width: 1024px) {
+  .hero-grid,
+  .services-grid,
+  .reasons-grid,
+  .process-grid,
+  .testimonials-grid,
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .hero-grid,
+  .services-grid,
+  .reasons-grid,
+  .process-grid,
+  .testimonials-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .cta-box {
+    padding: 40px 22px;
   }
 
   .gallery-item img {
